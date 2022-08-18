@@ -1,13 +1,13 @@
-package com.example.apiwcrud.service;
+package com.example.thicsw.service;
 
-import com.example.apiwcrud.model.Class;
+import com.example.thicsw.model.Employees;
 
 import java.util.List;
 
-public interface ClassService {
-    public void saveClass(Class c);
-    public void deleteClass(Integer id);
-    public Class findById(Integer id);
-    public List<Class> findAll();
-    public List<Class> findAllByName(String name);
+public interface EmployeesService {
+    public void saveEmployees(Employees e);
+    public void deleteEmployees(Integer id);
+    public Employees findById(Integer id);
+    public List<Employees> findAll();
+    public List<Employees> findAllByName(String name);
 }

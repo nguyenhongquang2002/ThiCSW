@@ -1,15 +1,15 @@
-package com.example.apiwcrud.repository;
+package com.example.thicsw.repository;
 
-import com.example.apiwcrud.model.Class;
+import com.example.thicsw.model.Employees;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ClassRepository extends JpaRepository<Class, Integer> {
-    List<Class> findAllByName(String name);
-    List<Class> findAllByNameContainsIgnoreCase(String name);
-    List<Class> findAllByNameAndRoom(String name, String room);
-    List<Class> findAllByNameOrderByRoomAsc(String name); //Asc là ít - Desc là nhiều
+public interface EmployeesRepository extends JpaRepository<Employees, Integer> {
+    List<Employees> findAllByName(String name);
+    List<Employees> findAllByNameContainsIgnoreCase(String name);
+    List<Employees> findAllByNameAndSalary(String name, String salary);
+    List<Employees> findAllByNameOrderBySalaryAsc(String name); //Asc là ít - Desc là nhiều
 }

@@ -1,39 +1,39 @@
-package com.example.apiwcrud.service;
+package com.example.thicsw.service;
 
-import com.example.apiwcrud.model.Class;
-import com.example.apiwcrud.repository.ClassRepository;
+import com.example.thicsw.model.Employees;
+import com.example.thicsw.repository.EmployeesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ClassServiceimpl implements ClassService {
+public class EmployeesServiceimpl implements EmployeesService {
     @Autowired
 
-    ClassRepository classRepository;
+    EmployeesRepository employeesRepository;
 
     @Override
-    public void saveClass(Class c) {
-        classRepository.save(c);
+    public void saveEmployees(Employees e) {
+        employeesRepository.save(e);
     }
 
     @Override
-    public void deleteClass(Integer id) {
-        classRepository.deleteById(id);
+    public void deleteEmployees(Integer id) {
+        employeesRepository.deleteById(id);
     }
 
     @Override
-    public Class findById(Integer id) {
-        return classRepository.findById(id).get();
+    public Employees findById(Integer id) {
+        return employeesRepository.findById(id).get();
     }
 
     @Override
-    public List<Class> findAll() {
-        return classRepository.findAll();
+    public List<Employees> findAll() {
+        return employeesRepository.findAll();
     }
 
-    public List<Class> findAllByName(String name){
-        return classRepository.findAllByName(name);
+    public List<Employees> findAllByName(String name){
+        return employeesRepository.findAllByName(name);
     }
 }
